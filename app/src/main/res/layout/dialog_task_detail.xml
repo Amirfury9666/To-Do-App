@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin16dp"
+            app:cardBackgroundColor="@color/cardBackground"
+            app:cardCornerRadius="@dimen/cardRadius10"
+            app:cardElevation="@dimen/cardElevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding16">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/google_sans_bold"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/textSize21"
+                    tools:text="Amir Fury" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin16dp"
+                    android:minHeight="200dp">
+
+                    <TextView
+                        android:id="@+id/decription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:minHeight="200dp"
+                        android:maxLines="10"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/textSize16"
+                        tools:text="@string/app_name" />
+
+                </androidx.core.widget.NestedScrollView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/margin16dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/cancelButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin10dp"
+                        android:layout_marginRight="@dimen/margin5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/grayColorDark"
+                        android:gravity="center"
+                        android:text="Cancel"
+                        android:textColor="@color/white"
+                        app:icon="@drawable/ic_cancel"
+                        app:iconTint="@color/white" />
+
+                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                        android:id="@+id/editButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/margin10dp"
+                        android:layout_marginLeft="@dimen/margin5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/grayColorDark"
+                        android:gravity="center"
+                        android:text="Edit"
+                        android:textColor="@color/white"
+                        app:icon="@drawable/ic_edit"
+                        app:iconTint="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.AddToDoActivity">
+
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/actionBarSize">
+
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="56dp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/padding12dp"
+                    android:src="@drawable/ic_arrow_back"
+                    app:tint="@color/blackColor" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/taskTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/backButton"
+                    android:hint="Add Title"
+                    android:background="@color/white"
+                    android:paddingHorizontal="@dimen/padding16"
+                    android:fontFamily="@font/google_sans_regular"
+                    android:singleLine="true"
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/textSize18" />
+            </RelativeLayout>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_below="@id/toolbar"
+            android:id="@+id/taskDescription"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:background="@color/white"
+            android:textColor="@color/textColorPrimary"
+            android:hint="Enter New Description For New Task"
+            android:fontFamily="@font/google_sans_regular"
+            android:padding="@dimen/padding16"
+            android:textColorHint="@color/hintColor"
+            android:textSize="@dimen/textSize14"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/saveTaskButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/margin16dp"
+            android:text="Save"
+            android:backgroundTint="@color/grayColorDark"
+            android:textColor="@color/white"
+            app:icon="@drawable/ic_save"
+            app:iconTint="@color/white" />
+
+    </RelativeLayout>
+</layout>
